@@ -10,7 +10,7 @@ mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
 hands = mp_hands.Hands()
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 wristPos = {"Left":[0,0,0],
                 "Right":[0,0,0]}
 
@@ -119,7 +119,7 @@ def mainControl(multiHandResults,handmarkResults,frame):
             keyboard.press("k")
             time.sleep(0.1)
             keyboard.release("k")
-            cv2.putText(frame, "left jab", (50, 100), cv2.FONT_HEkRSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
+            cv2.putText(frame, "left jab", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
     else:
         keyboard.press("l")
         time.sleep(0.1)
